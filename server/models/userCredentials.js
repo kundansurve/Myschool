@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const userCredential = new Schema({
-    username:{
+    userId:{
         type: String,
         required: true
     },
@@ -12,7 +12,7 @@ const userCredential = new Schema({
     },
     expiryDate:{
         type: Date,
-        default:(Date.now()+(30 * 24 * 60 * 60 * 1000))
+        required:true
     }
 });
 
